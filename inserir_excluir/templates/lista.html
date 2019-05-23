@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de contatos</title>
+</head>
+<body>
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td>Nome</td>
+                <td>E-mail</td>
+                <td>Acão:</td>
+            </tr>
+            {% for c in  contatos %}
+                <tr>
+                    <td>{{ c[0] }}</td>
+                    <td>{{ c[1] }}</td>
+                    <td>{{ c[2] }}</td>
+                    <td><a href="/deletar/{{ c[0] }}">Deletar</td>
+                    <td><a href="/form_alteracao/{{ c[0] }}">Alterar</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <h3><a href="#">ADD</a></h3>
+</body>
+</html>

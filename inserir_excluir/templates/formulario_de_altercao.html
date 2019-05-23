@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Alteração</title>
+</head>
+<body>
+    <h3>Formulario de Alteração</h3>
+    <form action="/alteracao" method="post">
+        Novo Nome: <input type="text" name="novo_nome" placeholder="{{ info[1] }}"><br><br>
+        Novo E-mail:<input type="text" name="novo_email" placeholder="{{ info[2] }}"><br><br>
+        <input type="hidden" type="text" name="id" value="{{ info[0] }}">
+        <input type="submit" value="Alt">
+    </form>
+</body>
+</html>
